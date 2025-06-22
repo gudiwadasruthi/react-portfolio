@@ -45,7 +45,6 @@ const projectsData = [
     ],
     Github: "https://github.com/gudiwadasruthi/Emotion-Based-Music-Player.git"  // Replace with your actual GitHub URL
   }
-  // Add more projects here in the same format
 ];
 
 // Static Certificates Data
@@ -57,7 +56,6 @@ const certificatesData = [
     date: "29th May 2025",
     image: "/hackthon certificate.jpg"  // Fixed filename to match actual file
   }
-  // Add more certificates here
 ];
 
 // Tech Stack Icons

@@ -115,14 +115,14 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
 const AboutPage = () => {
   // Memoized calculations
   const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
-    const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
-    const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
-    
-    const startDate = new Date("2021-11-06");
+    // Always 1 project and 1 certificate
+    const storedProjects = [{ id: 'emotion-music-player' }];
+    const storedCertificates = [{ id: 'cert1' }];
+    // Set start date to today for 0 years experience
+    const startDate = new Date();
     const today = new Date();
     const experience = today.getFullYear() - startDate.getFullYear() -
       (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
-
     return {
       totalProjects: storedProjects.length,
       totalCertificates: storedCertificates.length,
@@ -215,9 +215,9 @@ const AboutPage = () => {
               data-aos-duration="1500"
             >
               
-                I’m a 3rd-year Computer Science and Engineering student at SRM University, AP, passionate about building innovative digital experiences.<br></br>
-                I have hands-on experience in web development and Python, and I’m actively exploring AI and Machine Learning.<br></br>
-                My focus is on creating projects that have real-world impact, and I’m always eager to connect, learn, and grow alongside others in the tech community.
+                I'm a 3rd-year Computer Science and Engineering student at SRM University, AP, passionate about building innovative digital experiences.<br></br>
+                I have hands-on experience in web development and Python, and I'm actively exploring AI and Machine Learning.<br></br>
+                My focus is on creating projects that have real-world impact, and I'm always eager to connect, learn, and grow alongside others in the tech community.
              
             </p>
 
