@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: https://www.sruthigudiwada.com/sitemap.xml
+Disallow:
+Allow: /
