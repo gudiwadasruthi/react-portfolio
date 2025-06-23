@@ -214,7 +214,7 @@ const AboutPage = () => {
               data-aos="fade-right"
               data-aos-duration="1500"
             >
-              
+                hi hello
                 I'm a 3rd-year Computer Science and Engineering student at SRM University, AP, passionate about building innovative digital experiences.<br></br>
                 I have hands-on experience in web development and Python, and I'm actively exploring AI and Machine Learning.<br></br>
                 My focus is on creating projects that have real-world impact, and I'm always eager to connect, learn, and grow alongside others in the tech community.
