@@ -21,7 +21,7 @@ const projectsData = [
     Title: "Emotion based music player",
     Description: "An innovative music player that uses facial recognition to detect emotions and play matching music. Built with modern technologies for a personalized music experience.",
     Img: "/ebm.jpg",  // Fallback image
-    Video: "/emotion-music-demo.mp4",  // Add your video file here
+    Video: "emotion-music-demo (1).mp4",  // Add your video file here
     Link: "https://your-project-url.com",  // Replace with your actual project URL
     TechStack: [
       "Flask",
@@ -50,7 +50,7 @@ const projectsData = [
     Title: "ReadWise AI",
     Description: "An AI-powered web app to upload PDFs, analyze them with AI, and ask questions about their content. Built for the Adobe Hackathon 2025 with a fast, containerized backend and interactive frontend.",
     Img: "/ReadWiseAI (2).png",  // Fallback image
-    Video: "readwiseai (2).mp4",  // Add your demo video file here
+    Video: "Readwise.mp4",  // Add your demo video file here
     Link: "https://pdf-chatbot-chi.vercel.app/",  // Live demo link
     TechStack: [
       "FastAPI",
