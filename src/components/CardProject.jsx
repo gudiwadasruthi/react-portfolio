@@ -1,19 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ExternalLink, ArrowRight } from 'lucide-react';
-import VideoModal from './VideoModal';
 
-const CardProject = ({ Img, Title, Description, Link: ProjectLink, id, Video }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+const CardProject = ({ Img, Title, Description, Link: ProjectLink, id }) => {
   const handleLiveDemo = (e) => {
-    if (Video) {
-      e.preventDefault();
-      setIsModalOpen(true);
-      return;
-    }
     if (!ProjectLink) {
-      console.log("ProjectLink kosong");
+      console.log("ProjectLink is empty");
       e.preventDefault();
       alert("Live demo link is not available");
     }
@@ -53,19 +45,19 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id, Video }) 
             </p>
             
             <div className="pt-4 flex items-center justify-between">
-              {(ProjectLink || Video) ? (
+              {ProjectLink ? (
                 <a
-                  href={ProjectLink || "#"}
+                  href={ProjectLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={handleLiveDemo}
                   className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                 >
-                  <span className="text-sm font-medium">Live Demo</span>
+                  <span className="text-sm font-medium">View Project</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
               ) : (
-                <span className="text-gray-500 text-sm">Demo Not Available</span>
+                <span className="text-gray-500 text-sm">Project Link Not Available</span>
               )}
               
      
@@ -88,12 +80,6 @@ const CardProject = ({ Img, Title, Description, Link: ProjectLink, id, Video }) 
           <div className="absolute inset-0 border border-white/0 group-hover:border-purple-500/50 rounded-xl transition-colors duration-300 -z-50"></div>
         </div>
       </div>
-      <VideoModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        videoSrc={Video}
-        title={`${Title} - Live Demo`}
-      />
     </div>
   );
 };
